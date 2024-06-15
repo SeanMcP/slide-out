@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Out</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SlideOut</h1>
+    <h2>With close</h2>
+    <slide-out aria-labelledby="ex-1">
+        <button slot="trigger">Open</button>
+        <button slot="close">X</button>
+        <div slot="content">
+            <h1 id="ex-1">Slide Out</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <a href="#read-more">Read More</a>
+            <a href="#read-more-2" data-close>Read More (and close)</a>
+        </div>
+    </slide-out>
+    <hr />
+    <h2>Without close</h2>
+    <button>Before</button>
+    <slide-out aria-labelledby="ex-2" style="--slide-out-background-color: dodgerblue; --slide-out-padding: 2px;"
+        transition-duration-ms="1000">
+        <button slot="trigger">Open</button>
+        <div slot="content">
+            <h1 id="ex-2">Slide Out</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <a href="#read-more">Read More</a>
+            <a href="#read-more-2" data-close>Read More (and close)</a>
+        </div>
+    </slide-out>
+    <button>After</button>
+</body>
+
+<script type="module" src="slide-out.js"></script>
+
+</html>
